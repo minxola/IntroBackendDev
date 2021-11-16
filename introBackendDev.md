@@ -117,13 +117,101 @@ Existen dos estandares para las API's:
 
 ## 5. HTTP, el lenguaje qeu habla Internet
 
+**HTTP**, del inglés HyperText Transfer Protocol.
 
+**Cliente**, los dipositivos como tablet, smarthphone, etc. Hacen peticiones al servidor.
 
+**Servidor**, un dispositivo que está disponible todo el tiempo, envía una respuesta cuando el cliente lo solicita.
 
+Las peticiones tienen 3 variables o cabeceras. 
 
+- HOST: Servidor al que se hace la petición.
+- Accept-language, indica el lenguaje.
+- Método: Que puede ser POST, GET, PUT, DELETE, TRACE, etc.
 
+```http
+# Request
+GET / HTTP/1.1
+Host: developer.mozilla.org
+Accept-Language: fr
+```
 
+El servidor responderá tambien con un 'lenguaje HTTP', el cual tiene diversos componentes.
 
+```http
+# Response
+HTTP/1.1 200 ok
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html
+<!DOCTYPE html...(here comes the 20769 bytes of the requested web page)
+```
+
+La respuesta tiene encabezados y un  body que contiene la respuesta del servidor con los datos solicitados.
+
+HTTP/1.1 es la versión HTTP, que es la misma que la petición.
+
+200 ok: Es el **estado de la petición**, en este caso la respuesta fue exitosa. Existen diferentes estados de respuesta HTTP.
+
+- 100 - 199: Respuestas informativas
+- 200 - 299: Respuestas satisfactorias
+- 300 - 399: Redirecciones
+- 400 - 499: Errores de los clientes
+- 500 - 599: Errores de los servidores
+
+Tipicos errores que vemos al momento de hacer peticiones:
+
+404 Not found: El servidor no pudo encontrar el contenido solicitado. Es el mas famoso y de alta ocurrencia en la web.
+
+403 Forbidden: Cuando el cliente no posee los permisos para cierto contenido, por lo que el servidor rechaza otorgar la respuesta apropiada.
+
+500 Internal Server Error: El servidor ha encontrado una situación que no sabe como manejarla.
+
+502 Bad Gateway: Significa que el servidor, mientras trabaja como una puerta de enlace para obtener una respuesta necesaria para manejar la petición, obtuvo una respuesta inválida.
+
+El protocolo HTTP se ubica dentro de una escala gerarquica de los protocolos que tenemos en la web. 
+
+A grandes rasgos se ubicaría entre los protocolos:
+
+(IP, UDP, DNS, TCP, TLS) -> (HTTP) -> (HTML, CSS, Web API, JavaScript)
+
+Donde:
+
+- TCP: Transmission Control Protocol
+- TLS: Transfer Layer Security
+- DNS: Domain Name System
+- IP: Internet Protocol
+- UDP: User Data Protocol
+
+> **RESUMEN**:
+>
+> El **Server** envía el html, css y javascript al **Client** para que el mismo mediante su navegador pueda representar la app web, a su ve el **Client** envía un *request http* al **Server** para que el mismo mediante su **API** pueda constestar (**response**) con los datos en formato **JSON** para que el **Client** pueda aprovecharlos.
+
+## 6. Flujo de desarrollo de una Aplicación Web
+
+**Editor de Código**: Es la aplicación que nos permite editar nuestro código, puede ser un editor de texto plano, sin embargo hay aplicaciónes específicas para el desarrollo. Un editor conocido y recomendado es *Visual Studio Code*.
+
+**Sistema de Control de Versiones**: Nos permite controlar los cambios y la historia de el proyecto que estamos desarrollando, así podemos movernos por los diferentes puntos historicos de la aplicación, crear ramas de prueba, crear ramas para resolver errores, etc.
+
+**Browser**: En desarrollo web el browser es el navegador, que nos permite ejecutar la aplicación, ver su apariencia y comportamiento. Entre los navegadores mas conocidos tenemos: Google Chrome, Mozilla Firefox, Edge, Opera, etc.
+
+**Servidor o Server**: Es una computadora que contiene la aplicación o sirve a los dispositivos clientes.
+
+**Deploy**: Es el proceso de colocar el código local hacia el servidor. El deploy no necesariamente se hace de manera directa, sino que primero nuestro código pasa por un repositorio remoto como GitHub.
+
+**PUSH**: Es el proceso de pasar nuestro código hacia GitHub.
+
+**PULL**: Es el proceso de traer los cambios desde GitHub hasta nuestro repositorio local (en nuestra computadora)
+
+**CI/CD**: Continuous Integration y Continuous Delivery, toma el código del local y realiza pruebas, si todo funciona bien el código va al servidor, completándose así el Deployment.
+
+**Production**: El código que está en el servidor y esta ejecutándose. La aplicación esta almacenada en un servidos y que tiene una dirección IP el cual está asociado a un Dominio.
+
+**Local Host**: Es el servidor local, se usa para el desarrollo en nuestra computadora. Generalmente el servidor local funciona en un IP local 127.0.0.1 y el puerto 8000.
 
 
 
