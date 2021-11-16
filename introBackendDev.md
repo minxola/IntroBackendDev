@@ -213,9 +213,50 @@ Donde:
 
 **Local Host**: Es el servidor local, se usa para el desarrollo en nuestra computadora. Generalmente el servidor local funciona en un IP local 127.0.0.1 y el puerto 8000.
 
+## 7. El servidor: Hogar del ćodigo
 
+Un servidor es una computadora que contiene una aplicación y la distribuye en internet. El cliente a través del protocolo HTTP puede hacerle peticiones y obtener datos para ser representados en el navegador.
 
+Cuando se habla de la ***Nube***, se refiere a un conjunto de servidores ubicados en algún lugar del mundo y que almacenan aplicaciones web. A este conjunto de servidores ubicados en algún lugar se le denomina **Data Centers**, desde aquí envian datos a todo en todo el mundo para los diferentes clientes.
 
+**Hosting**: Un espacio en un servidor donde podemos guardar una aplicación.
+
+Los servidores o hosting pueden darse de diferentes formas, y vamos a tener en cuenta al momento de elegir un servicio de Hosting: IaaS, PaaS y SaaS.
+
+### **IaaS: Infrestruture as a Service**
+
+Nos permite controlar la infraestructura del Servidor como CPU, RAM y tipo de disco SSD. Se debe configurar el servidor desde cero.
+
+Las mas populares IaaS:
+
+- Amazon Web Services
+- Microsoft Azure
+- Digital Ocean
+
+Tipos de IaaS:
+
+- VPS: Virtual Private Server, donde el usuario tien mas control del servidor
+- Shared Hosting: El usuario debe compartir el servidor con otros clientes.
+
+### **PaaS: Platform as a Service**
+
+El servidor se encarga de actualizar todas las aplicaciones que mantienen el servidor. Solo se debe elegir que es lo que necesita la aplicación para funcionar: Bases de datos, Firewall, etc.
+
+Los mas populares tenemos:
+
+- Google App Engine
+- Firebase
+- Heroku
+
+### **SaaS: Software as a Service**
+
+Ofrece software o una aplicación que funcione y ya exista para hacer funcionar un negocio. Esta diseñado para usuarios que recien empiezan.
+
+Los más pupulares:
+
+- Google Docs
+- Slack
+- WordPress
 
 
 
