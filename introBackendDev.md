@@ -337,15 +337,43 @@ Cada vez que entremos al endpoint, el servidor responderá con un archivo que co
 }
 ```
 
+## 11. Que lenguaje y framework escoger para backend
 
+**Frameworks Python:**
 
+- **Django**, es el mas robusto. Tiene panel de administración completo para trabajar con muchos datos. Documentación de 3 mil páginas.
+- **Flask**, es facil de aprender y para aplicaciones simples.
+- **Fast API**, es el framework mas rápido y potente, mucho mas rápido de Django y Flask.
 
+**Frameworks JavaScript**:
 
+- **Express**, simple y facil de escribir
+- **Nest**, esta escrito con un nivel de complejidad mayor con mas ventajas y codigo aprovechable.
 
+**Frameworks PHP**:
 
+- **Laravel**, mas simple
+- **Synfony**, para apps mas complejas y mas escalables
 
+**Frameworks Java**:
 
+- **Spring**, sirve para backend de aplicaciones web
 
+**Frameworks Go**:
 
+- **Gin**
+- **Beego**
 
+**Frameworks Ruby**:
 
+- **Ruby on rails**
+
+## 12. Empieza tu camino
+
+Lo que se aprendió:
+
+- [x] HTTP
+- [x] API
+- [x] JSON
+- [x] SERVIDORES
+- [x] LA NUBE
