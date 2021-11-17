@@ -258,6 +258,91 @@ Los más pupulares:
 - Slack
 - WordPress
 
+## 8. Proyecto: Diseño y bosquejo de una API
+
+### Creación de una API simple
+
+**Twitter**, es una aplicación de micro blogging. Cada usuario escribe un twit y los seguidores pueden ver el mensaje.
+
+Si fueramos a crear una aplicación similar o un clon de twitter, nuestra aplicaición tendría que ser capaz de crear: *Usuarios*, *Mensajes*, *Actualizar usuarios*. Así mismo también tendría que ser capaz de borrar usuarios y mensajes.
+
+Los términos usados: Crear, Leer, Actualizar y Borrar, a estos verbos usados se le denomina como **CRUD** (create, read, update and delete)
+
+A este CRUD se le puede traer a la vida mediante un API, que viene a ser el motor de la aplicación. De esta manera conectaremos el backend y el frontend mediante la API y nuestra aplicación estará funcionando.
+
+### Creación de Twitter API
+
+**API**: Application Program Interface
+
+Librerías para API en Python:
+
+- FastAPI
+- Django -> REST Framework
+- Flask
+
+**EndPoint o Route o Path**, es una sección de la URL de nuestro proyecto.
+
+La URL del proyecto generalmente es: **http://twitter.com/API/tweets**
+
+Componentes:
+
+- **http://**, es el protocolo
+- **twitter.com**, es el dominio
+- **/tweets**, es el ***EndPoint o Route o Path***. Viene despues del API
+
+## 9. Proyecto: Diseñando EndPoints de los Tweets
+
+Vamos a crear los Endpoints de los Tweets (models):
+
+- /tweets -> Show all tweets
+- /post -> publish a tweet
+- /tweets/{tweet-id} -> show a tweet
+- /tweets/{tweet-id}/update -> update a tweet
+- /tweets/{tweet-id}/delete -> delete a tweet
+
+> Nota:
+>
+> Cada sigla del CRUD tiene una representación en el mundo de las APIs y se llaman **verbos http**, que indican en la petición al servidor lo que se quiere hacer:
+>
+> - Create -> POST
+> - Read -> GET
+> - Update -> PUT
+> - Delete -> DELETE
+>
+> De esta manera los endpoints quedarían:
+>
+> - Crate a tweet: */tweets/ :POST*
+> - Read all tweets: */tweets/ :GET*
+> - Read a tweet: */tweets/{id} :GET*
+> - Update a tweet: */tweets/{id} :PUT*
+> - Delete a tweet: */tweets/{id} :DELETE*
+
+## 10. Proyecto: Diseñando los Endpoints para los usuarios
+
+Vamos a crear los Endpoints para los usuarios (models):
+
+- **/users** -> show all users
+- **/signup** -> register a user
+- **/users/{user-id}/** -> show a user
+- **/users/{user-id}/update** -> update a user
+- **/users/{user-id}/delete** -> delete a user
+
+Cada vez que entremos al endpoint, el servidor responderá con un archivo que contiene los datos, este archivo estará en formato JSON:
+
+```json
+{
+    "user-id": 121
+    "username": facMartoni
+    "email": facmartoni@mail.com
+}
+```
+
+
+
+
+
+
+
 
 
 
